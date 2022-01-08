@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CommentList = () => {
-  return <div></div>;
+  const [state, setState] = useState([]);
+  return;
+  <ul></ul>;
 };
 
 export default CommentList;
