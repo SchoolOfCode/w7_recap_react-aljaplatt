@@ -1,7 +1,19 @@
-import React from "react";
+// import React from "react";
 
-const CommentForm = () => {
-  return <div></div>;
-};
+// const CommentForm = ({ onSubmit }) => {
+//   return (
+//     <form>
+//       <label>
+//         Enter your name:
+//         <input type="text" />
+//       </label>
+//       <label>
+//         Enter your comment:
+//         <input type="text" />
+//       </label>
+//       <button onClick={() => onSubmit() => }>Submit</button>
+//     </form>
+//   );
+// };
 
-export default CommentForm;
+// export default CommentForm;
