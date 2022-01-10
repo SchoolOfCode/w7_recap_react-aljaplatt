@@ -1,17 +1,22 @@
 import React from "react";
 import "./style.css";
 
-const Comment = ({ author, text, handleAvatar }) => {
+const Comment = ({ author, text }) => {
   return (
-    <div className="comment-container">
+    <li className="comment-container">
       <div className="avatar-container">
-        <div className="avatar">BB</div>
-        <h4>Billy Bootcamper</h4>
+        <div className="avatar">
+          {author
+            .split(" ")
+            .map((item) => item[0])
+            .join("")}
+        </div>
+        <h4>{author}</h4>
       </div>
       <div className="post">
-        <p>Hey, great post</p>
+        <p>{text}</p>
       </div>
-    </div>
+    </li>
   );
 };
 
