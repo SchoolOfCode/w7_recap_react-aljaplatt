@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import BlogPost from "../BlogPost";
 import Comment from "../Comment";
-import CommentForm from "../CommentForm";
 import CommentList from "../CommentList";
-import CommentsSection from "../CommentsSection";
 import "./App.css";
 import "../Comment/style.css";
 

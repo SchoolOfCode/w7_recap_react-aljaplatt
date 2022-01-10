@@ -25,7 +25,11 @@ const CommentForm = ({ onSubmit }) => {
       </label>
       <label>
         Enter your comment:
-        <input type="text" onChange={(e) => setComment(e.target.value)} />
+        <input
+          type="text"
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+        />
       </label>
       <button type="submit">Submit</button>
     </form>
