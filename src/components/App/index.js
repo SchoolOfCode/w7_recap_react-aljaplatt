@@ -1,24 +1,26 @@
-import React from "react";
-import logo from "../../logo.svg";
+import React, { useState } from "react";
+import BlogPost from "../BlogPost";
+import Comment from "../Comment";
+import CommentList from "../CommentList";
 import "./App.css";
+import "../Comment/style.css";
 
 function App() {
+  const [posts, setPosts] = useState([
+    {
+      author: "Molly Bootcamper",
+      text: "Hey, great post",
+      id: 1,
+    },
+    { author: "Chris Meah", text: "Many thank yous", id: 2 },
+  ]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BlogPost />
+      <CommentList
+        posts={posts}
+        addPost={(item) => setPosts([...posts, item])}
+      />
     </div>
   );
 }
